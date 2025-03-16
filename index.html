@@ -1,1 +1,8 @@
-Hello World
+Steps to deploy a python flask web app to AWS EC2
+1. create a sample python flask web app on your local. Push to Github
+2. create an AWS EC2 instance.
+3. ssh into the instance ssh -i <key.pem> ec2-user@<ec2publicip>
+4. yum install git. yum install pip. pip install flask
+5. git clone the python flask web app into the ec2 instance.
+6. python3 main.py
+7. open browser and access via the webpage via the ec2 public ip. check that inbound security rules allow the port.
