@@ -10,13 +10,22 @@
     <h1>AWS</h1>
     <p>Steps to deploy a python flask web app to AWS EC2</p>
     <ul>
-        <li>1. create a sample python flask web app on your local. Push to Github</li>
-        <li>2. create an AWS EC2 instance.</li>
-        <li>3. ssh into the instance ssh -i <key.pem> ec2-user@<ec2publicip></li>
-        <li>4. yum install git. yum install pip. pip install flask</li>
-        <li>5. git clone the python flask web app into the ec2 instance.</li>
-        <li>6. python3 main.py</li>
-        <li>7. open browser and access via the webpage via the ec2 public ip. check that inbound security rules allow the port.</li>
+        <li>create a sample python flask web app on your local. Push to Github</li>
+        <li>create an AWS EC2 instance.</li>
+        <li>ssh into the instance ssh -i <key.pem> ec2-user@<ec2publicip></li>
+        <li>yum install git. yum install pip. pip install flask</li>
+        <li>git clone the python flask web app into the ec2 instance.</li>
+        <li>python3 main.py</li>
+        <li>open browser and access via the webpage via the ec2 public ip. check that inbound security rules allow the port.</li>
+    </ul>
+    <p>Steps create Ec2 instance using terraform</p>
+    <ul>
+        <li>Create Git repo for terraform IAC. Add a .gitignore for .terraform folder and *.tfstate*</li>
+        <li>Clone Git repo. run terraform init</li>
+        <li>Write main.tf to create ec2 instance, using existing key pair. pem file contents are not visible.</li>
+        <li>Run terraform plan,apply,destroy to play with it and verify in aws console.</li>
+        <li>Can ssh into ec2 instance using key pair</li>
+        <li>When pushing to Git, verify .terraform folder and *.tfstate* are not pushed</li>
     </ul>
 </body>
 </html>
