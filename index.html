@@ -22,7 +22,7 @@
     <ul>
         <li>Create Git repo for terraform IAC. Add a .gitignore for .terraform folder and *.tfstate*</li>
         <li>Clone Git repo. run terraform init</li>
-        <li>Write main.tf to create ec2 instance, using existing key pair. pem file contents are not visible.</li>
+        <li>Write main.tf to create ec2 instance, using existing key pair. pem file contents are not visible. Use "data" block to reference existing key pair in aws</li>
         <li>Run terraform plan,apply,destroy to play with it and verify in aws console.</li>
         <li>Can ssh into ec2 instance using key pair</li>
         <li>When pushing to Git, verify .terraform folder and *.tfstate* are not pushed</li>
